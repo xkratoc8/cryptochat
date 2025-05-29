@@ -1,0 +1,5 @@
+{
+  "name": "CipherChat - Development",
+  "jwtKey": "Pnz%%xZ8ppi8gPp8PZzxJenNwUEp#P9GA$RcqUe@^",
+  "MONGODB_URI": "mongodb+srv://crypto:crypto@cluster0.vdiqxtp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+}
