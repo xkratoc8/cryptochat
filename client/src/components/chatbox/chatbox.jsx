@@ -112,7 +112,7 @@ const ChatBox = ({ socket, user, match, getPassphrase, handleChannelOpen }) => {
     }
 
     msgObj["channel"] = channel;
-    msgObj["recieverPbkHash"] = SHA256(
+    msgObj["receiverPbkHash"] = SHA256(
       localStorage.getItem("chatmate_pbk")
     ).toString();
     msgObj["senderPbkHash"] = user.pbkHash;

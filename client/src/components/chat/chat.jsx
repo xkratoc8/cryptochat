@@ -65,7 +65,7 @@ const Chat = ({ history, location }) => {
 
   async function changeStatus() {
     if (isOnline) beOffline();
-    else beOnline();
+    else await beOnline();
   }
 
   async function beOnline() {

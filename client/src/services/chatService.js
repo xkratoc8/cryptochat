@@ -13,7 +13,7 @@ export const getChats = async (channel, limit, config) => {
     "x-auth-token": token
   };
 
-  return await http.get(`${serviceEndpoint}/${channel}?${query}`, config);
+  return http.get(`${serviceEndpoint}/${channel}?${query}`, config);
 };
 
 export async function sendChat(msgObj, config) {
@@ -22,7 +22,7 @@ export async function sendChat(msgObj, config) {
     "x-auth-token": token
   };
 
-  return await http.post(serviceEndpoint, msgObj, config);
+  return http.post(serviceEndpoint, msgObj, config);
 }
 
 export async function getPrivateChannels(pbkHash, config) {
@@ -31,9 +31,9 @@ export async function getPrivateChannels(pbkHash, config) {
     "x-auth-token": token
   };
 
-  return await http.get(
-    `${serviceEndpoint}/privateChannels/${pbkHash}`,
-    config
+  return http.get(
+      `${serviceEndpoint}/privateChannels/${pbkHash}`,
+      config
   );
 }
 
@@ -43,5 +43,5 @@ export async function seenChat(chatId, config) {
     "x-auth-token": token
   };
 
-  return await http.put(`${serviceEndpoint}/seen/${chatId}`, {},config);
+  return http.put(`${serviceEndpoint}/seen/${chatId}`, {}, config);
 }

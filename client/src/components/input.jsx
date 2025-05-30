@@ -6,7 +6,6 @@ const InputField = styled.input`
   box-sizing: border-box;
   border: 0;
   border-radius: 4px;
-  box-shadow: 0;
   padding: 1rem;
   height: 2.25em;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);

@@ -12,7 +12,7 @@ export const searchUsers = async (searchData, config) => {
     "x-auth-token": token
   };
 
-  return await http.put(serviceEndpoint + "/searchUser", searchData, config);
+  return http.put(serviceEndpoint + "/searchUser", searchData, config);
 };
 
 export const getUser = async (searchData, config) => {
@@ -21,15 +21,15 @@ export const getUser = async (searchData, config) => {
     "x-auth-token": token
   };
 
-  return await http.put(serviceEndpoint + "/getUser", searchData, config);
+  return http.put(serviceEndpoint + "/getUser", searchData, config);
 };
 
 export const postUser = async data => {
-  return await http.post(serviceEndpoint, data);
+  return http.post(serviceEndpoint, data);
 };
 
 export async function updateUser(_id, data, config) {
-  return await http.put(`${serviceEndpoint}/${_id}`, data, config);
+  return http.put(`${serviceEndpoint}/${_id}`, data, config);
 }
 
 export const checkUsername = async username => {
@@ -50,5 +50,5 @@ export const getUserProfile = async config => {
     "x-auth-token": token
   };
 
-  return await http.get(`${serviceEndpoint}/auth`, config);
+  return http.get(`${serviceEndpoint}/auth`, config);
 };
